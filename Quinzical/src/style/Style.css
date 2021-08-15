@@ -1,0 +1,168 @@
+/*
+ * 
+ * These are the iamge files which will make the background of all gui screens
+ */
+ 
+ 
+.imageBackground{
+	-fx-background-image: url("/style/backGroundImage.jpg");
+	-fx-background-repeat: stretch;
+	-fx-background-size: 914 719;
+	-fx-background-position: center center;
+	-fx-effect: dropshadow(three-pass-box, black, 30, 0.5, 0, 0);			
+ }
+ 
+
+.rewardScreenGuiImage{
+-fx-background-image: url("/style/rewardScreenBackground.jpg");
+-fx-background-repeat: stretch;
+-fx-background-size: 914 719;
+-fx-background-position: center center;
+-fx-effect: dropshadow(three-pass-box, black, 30, 0.5, 0, 0);
+} 
+
+/*
+ * The general screen gui starts here
+ */
+
+.Button:hover {
+    -fx-background-color: 
+        linear-gradient(from 0% 93% to 0% 100%, #a34313 0%, #903b12 100%),
+        #9d4024,
+        #d86e3a,
+        radial-gradient(center 50% 50%, radius 100%, #ea7f4b, #c54e2c);
+}
+
+.Button:pressed {
+    -fx-padding: 10 15 13 15;
+    -fx-background-insets: 2 0 0 0,2 0 3 0, 2 0 4 0, 2 0 5 0;
+}
+
+
+.Button:text {
+    -fx-text-fill: white;
+    -fx-effect: dropshadow( gaussian , #a30000 , 0,0,0,2 );
+}
+
+/*
+ * The home screen specifc gui starts here
+ */
+
+
+.mainScreenButton {
+    -fx-padding: 1 2 2 2;
+    -fx-background-insets: 0,0 0 5 0, 0 0 6 0, 0 0 7 0;
+    -fx-background-radius: 8;
+    -fx-background-color: 
+        linear-gradient(from 0% 93% to 0% 100%, #a34313 0%, #903b12 100%),
+        #9d4024,
+        #d86e3a,
+        radial-gradient(center 50% 50%, radius 100%, #d86e3a, #c54e2c);
+    -fx-effect: dropshadow( gaussian , rgba(0,0,0,0.75) , 4,0,0,1 );
+    -fx-font-weight: bold;
+    -fx-font-size: 1.1em;
+   	
+}
+
+.mainScreenButtonText {
+	-fx-text-fill: white;
+}
+
+/*
+ * The practice screen specifc gui starts here
+ */
+ 
+ /*The practice screen has a different size and layout so there has to be less padding to allow the text to look good*/
+ .practiceScreenButtons {
+    -fx-padding: 2 4 4 4;
+    -fx-background-insets: 0,0 0 5 0, 0 0 6 0, 0 0 7 0;
+    -fx-background-radius: 8;
+    -fx-background-color: 
+        linear-gradient(from 0% 93% to 0% 100%, #a34313 0%, #903b12 100%),
+        #9d4024,
+        #d86e3a,
+        radial-gradient(center 50% 50%, radius 100%, #d86e3a, #c54e2c);
+    -fx-effect: dropshadow( gaussian , rgba(0,0,0,0.75) , 4,0,0,1 );
+    -fx-font-weight: bold;
+    -fx-font-size: 1.1em;
+}
+ 
+ 
+/*
+ * The game screen specifc gui starts here
+ */
+ 
+ 
+ 
+ 
+ /*
+  * Buttons end here and labels begin
+  * 
+  */
+  
+.gameScreenGuiLabels {
+    -fx-background-color: 
+        #000000,
+        linear-gradient(#7ebcea, #2f4b8f),
+        linear-gradient(#426ab7, #263e75),
+        linear-gradient(#395cab, #223768);
+    -fx-background-insets: 0,1,2,3;
+    -fx-background-radius: 3,2,2,2;
+    -fx-padding: 6 15 6 15;
+    -fx-text-fill: white;
+    -fx-font-size: 12.5px;
+}
+
+
+.smallLabels{
+	
+	 -fx-background-color: 
+        #000000,
+        linear-gradient(#7ebcea, #2f4b8f),
+        linear-gradient(#426ab7, #263e75),
+        linear-gradient(#395cab, #223768);
+    -fx-background-insets: 0,1,2,3;
+    -fx-background-radius: 3,2,2,2;
+    -fx-padding: 2 3 3 3;
+    -fx-text-fill: white;
+    -fx-font-size: 15.5px;
+}
+
+.largeMainScreenLabel{
+	
+	 -fx-background-color: 
+        #000000,
+        linear-gradient(#7ebcea, #2f4b8f),
+        linear-gradient(#426ab7, #263e75),
+        linear-gradient(#395cab, #223768);
+    -fx-background-insets: 0,1,2,3;
+    -fx-background-radius: 3,2,2,2;
+    -fx-padding: 1 1 1 1;
+    -fx-text-fill: white;
+    -fx-font-size: 20.5px;
+}
+
+
+.gameScreenGuiLabels:text {
+    -fx-effect: dropshadow( one-pass-box , rgba(0,0,0,0.8) , 0, 0.0 , 0 , 1);
+}
+
+   
+
+
+.practiceScreenGuiLabels {
+    -fx-background-color: 
+        #000000,
+        linear-gradient(#7ebcea, #2f4b8f),
+        linear-gradient(#426ab7, #263e75),
+        linear-gradient(#395cab, #223768);
+    -fx-background-insets: 0,1,2,3;
+    -fx-background-radius: 3,2,2,2;
+    -fx-padding: 6 15 6 15;
+    -fx-text-fill: white;
+    -fx-font-size: 12.5px;
+}
+.practiceScreenGuiLabels:text {
+    -fx-effect: dropshadow( one-pass-box , rgba(0,0,0,0.8) , 0, 0.0 , 0 , 1);
+}
+

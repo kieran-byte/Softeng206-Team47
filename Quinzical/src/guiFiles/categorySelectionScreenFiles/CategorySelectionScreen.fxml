@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.shape.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.TilePane?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.shape.Polyline?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="676.0" prefWidth="900.0" styleClass="imageBackground"  xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="guiFiles.categorySelectionScreenFiles.CategorySelectionScreenController">
+   <children>
+      <Label alignment="CENTER" contentDisplay="CENTER" layoutX="249.0" layoutY="42.0" prefHeight="97.0" prefWidth="423.0" style="-fx-font-size: 20;" styleClass="gameScreenGuiLabels" text="Please select the categories you&#10;       wish to be quizzed on" textFill="WHITE">
+         <font>
+            <Font size="27.0" />
+         </font></Label>
+      <Button fx:id="returnButton" layoutX="672.0" layoutY="602.0" mnemonicParsing="false" onAction="#returnToMainMenu" prefHeight="50.0" prefWidth="178.0" styleClass="mainScreenButton"  text="return to main menu" />
+      <TilePane fx:id="checkBoxContainer" alignment="TOP_CENTER" hgap="50.0" layoutX="72.0" layoutY="186.0" prefHeight="305.0" prefWidth="758.0" vgap="50.0" />
+      <Label fx:id="remaningCounter" layoutX="739.0" layoutY="42.0" styleClass="gameScreenGuiLabels"  text="Picks remaning: 5" textFill="WHITE" />
+      <Button fx:id="confirmButton" layoutX="506.0" layoutY="602.0" mnemonicParsing="false" onAction="#confirmChoices" prefHeight="50.0" prefWidth="141.0" styleClass="mainScreenButton"  text="confirm choices" />
+      <Polyline fx:id="checkHelpArrow" fill="WHITE" layoutX="143.0" layoutY="152.0" points="-22.0, -33.0, 8.0, -33.0, -7.0, -2.0, -22.0, -33.0" strokeType="INSIDE" visible="false" />
+      <Line fx:id="checkLineHelp" endX="-6.0" endY="25.0" layoutX="142.0" layoutY="89.0" startX="-6.0" startY="-8.0" stroke="WHITE" visible="false" />
+      <Text fx:id="checkHelpText" fill="WHITE" layoutX="60.0" layoutY="48.0" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-text-alignment: center;" text="Pick categories you want to be quizzed on &#10;" visible="false" wrappingWidth="153.0">
+         <font>
+            <Font size="15.0" />
+         </font></Text>
+      <Line fx:id="lineHelpLine" endX="-6.0" endY="25.0" layoutX="809.0" layoutY="98.0" startX="-6.0" startY="4.0" stroke="WHITE" visible="false" />
+      <Polyline fx:id="remaningHelpArrow" fill="WHITE" layoutX="810.0" layoutY="137.0" points="-22.0, -33.0, 8.0, -33.0, -9.0, -63.0, -22.0, -33.0" strokeType="INSIDE" visible="false" />
+      <Text fx:id="remaningHelpText" fill="WHITE" layoutX="726.0" layoutY="136.0" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-text-alignment: center;" text="Number of categories left to pick&#10;" visible="false" wrappingWidth="153.0">
+         <font>
+            <Font size="15.0" />
+         </font></Text>
+      <Polyline fx:id="confirmButtonHelp" fill="WHITE" layoutX="584.0" layoutY="598.0" points="-22.0, -33.0, 8.0, -33.0, -7.0, -2.0, -22.0, -33.0" strokeType="INSIDE" visible="false" />
+      <Polyline fx:id="returnHelpArrow" fill="WHITE" layoutX="761.0" layoutY="599.0" points="-22.0, -33.0, 8.0, -33.0, -7.0, -2.0, -22.0, -33.0" strokeType="INSIDE" visible="false" />
+      <Line fx:id="confirmLineHelp" endX="-6.0" endY="25.0" layoutX="583.0" layoutY="539.0" startX="-6.0" startY="-2.10546875" stroke="WHITE" visible="false" />
+      <Line fx:id="returnHelpLine" endX="-6.0" endY="25.0" layoutX="760.0" layoutY="540.0" startX="-6.0" startY="-8.0" stroke="WHITE" visible="false" />
+      <Text fx:id="confirmHelpText" fill="WHITE" layoutX="526.0" layoutY="519.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Confirm Selections&#10;" visible="false" wrappingWidth="132.0">
+         <font>
+            <Font size="15.0" />
+         </font></Text>
+      <Text fx:id="returnHelpText" fill="WHITE" layoutX="677.0" layoutY="522.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Go back to main menu" visible="false" wrappingWidth="185.0">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Text>
+      <ImageView fx:id="questionImage" fitHeight="84.0" fitWidth="84.0" layoutX="36.0" layoutY="491.0" onMouseEntered="#showHelpLabels" onMouseExited="#hideHelpLabels" pickOnBounds="true" preserveRatio="true" AnchorPane.bottomAnchor="10.0" AnchorPane.leftAnchor="43.0" />
+   </children>
+</AnchorPane>

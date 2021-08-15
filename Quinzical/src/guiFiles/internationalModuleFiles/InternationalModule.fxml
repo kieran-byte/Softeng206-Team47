@@ -1,0 +1,175 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.image.*?>
+<?import java.lang.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.shape.*?>
+<?import javafx.scene.text.*?>
+<?import java.lang.String?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.Slider?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.shape.Polyline?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.image.ImageView?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="600.0" minWidth="700.0" prefHeight="676.0" prefWidth="900.0" styleClass="imageBackground" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="guiFiles.internationalModuleFiles.InternationalModuleController">
+   <children>
+ <ImageView fx:id="questionImage" fitHeight="84.0" fitWidth="84.0" layoutX="14.0" layoutY="546.0" onMouseEntered="#showHelpLabels" onMouseExited="#hideHelpLabels" pickOnBounds="true" preserveRatio="true" AnchorPane.bottomAnchor="10.0" AnchorPane.leftAnchor="43.0" />      <Polyline fx:id="returnHelpArrow" fill="WHITE" layoutX="342.0" layoutY="646.0" points="-26.0, -25.0, 10.0, -40.0, -26.0, -54.0, -26.0, -54.0" stroke="WHITE" strokeType="INSIDE" visible="false" />
+      <HBox alignment="CENTER_LEFT" layoutX="70.0" layoutY="27.0" prefHeight="72.0" prefWidth="760.0">
+         <children>
+            <Label prefHeight="65.0" prefWidth="257.0" style="-fx-font-size: 20;" styleClass="gameScreenGuiLabels" text="International Module">
+               <font>
+                  <Font size="29.0" />
+               </font>
+            </Label>
+            <Separator prefHeight="50.0" prefWidth="141.0" visible="false" />
+            <Label fx:id="returnHelpText1" prefHeight="72.0" prefWidth="115.0" text="Use this to adjust &#10;the read speed" textFill="WHITE" visible="false">
+               <font>
+                  <Font size="14.0" />
+               </font></Label>
+            <Line fx:id="returnHelpLine1" endX="15.292892456054688" endY="-0.621320366859436" startX="-40.547752380371094" startY="-1.6212759017944336" stroke="WHITE" visible="false" />
+            <Polyline fx:id="herlpSpeedArrow" fill="WHITE" points="-26.0, -25.0, 10.0, -40.0, -26.0, -54.0, -26.0, -54.0" stroke="WHITE" strokeType="INSIDE" visible="false" />
+            <VBox alignment="TOP_CENTER" prefHeight="75.0" prefWidth="183.0" HBox.hgrow="NEVER">
+               <children>
+                  <Label styleClass="gameScreenGuiLabels" text="Read speed">
+                     <font>
+                        <Font size="13.0" />
+                     </font>
+                  </Label>
+                  <Separator orientation="VERTICAL" prefHeight="28.0" prefWidth="95.0" visible="false" VBox.vgrow="NEVER" />
+                  <Slider fx:id="readSpeedBar" blockIncrement="0.5" majorTickUnit="0.25" max="2.0" maxWidth="186.0" min="0.5" prefHeight="38.0" prefWidth="175.0" showTickLabels="true" showTickMarks="true" style="-fx-background-color: rgba(255,255,255,0.75); background: 200; -fx-background-radius: 3;" value="1.0" VBox.vgrow="NEVER" />
+               </children>
+            </VBox>
+         </children>
+      </HBox>
+      <GridPane alignment="CENTER" hgap="2.0" layoutX="75.0" layoutY="195.0" prefHeight="238.0" prefWidth="760.0" vgap="2.0">
+        <columnConstraints>
+          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <Button fx:id="categoryButton1" alignment="CENTER" contentDisplay="CENTER" layoutX="11.0" layoutY="45.0" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#checkValid" style="-fx-text-alignment: center;" text="Click for next question&#10;$200" GridPane.rowIndex="1">
+               <styleClass>
+                  <String fx:value="practiceScreenButtons" />
+                  <String fx:value="Button" />
+               </styleClass>
+            </Button>
+            <Button fx:id="categoryButton2" layoutX="11.0" layoutY="167.0" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#checkValid" style="-fx-text-alignment: center;" text="Click for next question&#10;$200" GridPane.columnIndex="1" GridPane.rowIndex="1">
+               <styleClass>
+                  <String fx:value="practiceScreenButtons" />
+                  <String fx:value="Button" />
+               </styleClass>
+            </Button>
+            <Button fx:id="categoryButton3" layoutX="128.0" layoutY="50.0" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#checkValid" style="-fx-text-alignment: center;" text="Click for next question&#10;$200&#10;" GridPane.columnIndex="2" GridPane.rowIndex="1">
+               <styleClass>
+                  <String fx:value="practiceScreenButtons" />
+                  <String fx:value="Button" />
+               </styleClass>
+            </Button>
+            <Button fx:id="categoryButton4" layoutX="245.0" layoutY="89.0" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#checkValid" style="-fx-text-alignment: center;" text="Click for next question&#10;$200&#10;" GridPane.columnIndex="3" GridPane.rowIndex="1">
+               <styleClass>
+                  <String fx:value="practiceScreenButtons" />
+                  <String fx:value="Button" />
+               </styleClass>
+            </Button>
+            <Button fx:id="categoryButton5" layoutX="362.0" layoutY="89.0" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#checkValid" style="-fx-text-alignment: center;" text="Click for next question&#10;$200&#10;" GridPane.columnIndex="4" GridPane.rowIndex="1">
+               <styleClass>
+                  <String fx:value="practiceScreenButtons" />
+                  <String fx:value="Button" />
+               </styleClass>
+            </Button>
+            <Label fx:id="categoryLabel1" alignment="CENTER" contentDisplay="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="120.0" prefWidth="154.0" styleClass="gameScreenGuiLabels" text="category name&#10;Questions remaning:" textAlignment="CENTER">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Label>
+            <Label fx:id="categoryLabel5" alignment="CENTER" contentDisplay="CENTER" layoutX="11.0" layoutY="11.0" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="145.0" prefWidth="137.0" styleClass="gameScreenGuiLabels" text="category name&#10;Questions remaning:" textAlignment="CENTER" GridPane.columnIndex="4" GridPane.vgrow="NEVER">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Label>
+            <Label fx:id="categoryLabel4" alignment="CENTER" contentDisplay="CENTER" layoutX="11.0" layoutY="11.0" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="146.0" prefWidth="143.0" styleClass="gameScreenGuiLabels" text="category name&#10;Questions remaning:" textAlignment="CENTER" GridPane.columnIndex="3">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Label>
+            <Label fx:id="categoryLabel3" alignment="CENTER" contentDisplay="CENTER" layoutX="11.0" layoutY="11.0" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" styleClass="gameScreenGuiLabels" text="category name&#10;Questions remaning:" textAlignment="CENTER" GridPane.columnIndex="2">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Label>
+            <Label fx:id="categoryLabel2" alignment="CENTER" contentDisplay="CENTER" layoutX="11.0" layoutY="11.0" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" styleClass="gameScreenGuiLabels" text="category name&#10;Questions remaning:" textAlignment="CENTER" GridPane.columnIndex="1">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Label>
+         </children>
+         <opaqueInsets>
+            <Insets />
+         </opaqueInsets>
+      </GridPane>
+      <Label fx:id="currentWinningsText" alignment="CENTER" layoutX="75.0" layoutY="129.0" prefHeight="41.0" prefWidth="249.0" styleClass="gameScreenGuiLabels" text="Current winnings: $100">
+         <font>
+            <Font size="19.0" />
+         </font>
+      </Label>
+      <Button fx:id="mainMenuButton" layoutX="352.0" layoutY="586.0" mnemonicParsing="false" onAction="#returnToMenu" prefHeight="42.0" prefWidth="199.0" styleClass="mainScreenButton" text="return to main menu" />
+      <HBox layoutX="107.0" layoutY="507.0" prefHeight="42.0" prefWidth="688.0">
+         <children>
+            <TextField fx:id="userAnswer" disable="true" prefHeight="35.0" prefWidth="451.0" promptText="Please enter answer" HBox.hgrow="ALWAYS" />
+            <Separator prefHeight="14.0" prefWidth="14.0" visible="false" />
+            <Button fx:id="repeatButton" disable="true" mnemonicParsing="false" onAction="#repeatQuestion" prefHeight="42.0" prefWidth="155.0" styleClass="mainScreenButton" text="repeat question" />
+            <Separator prefHeight="14.0" prefWidth="15.0" visible="false" />
+            <Button fx:id="submitButton" disable="true" mnemonicParsing="false" onAction="#checkAnswer" prefHeight="55.0" prefWidth="84.0" styleClass="mainScreenButton" text="Submit" HBox.hgrow="NEVER" />
+         </children>
+      </HBox>
+      <Line fx:id="returnHelpLine" endX="15.292892456054688" endY="-0.621320366859436" layoutX="300.0" layoutY="607.0" startX="-72.0" startY="-0.621337890625" stroke="WHITE" visible="false" />
+      <Label fx:id="returnHelpText" layoutX="145.0" layoutY="567.0" prefHeight="72.0" prefWidth="117.0" text="This will return you to the main menu" textFill="WHITE" visible="false" wrapText="true">
+         <font>
+            <Font size="15.0" />
+         </font></Label>
+      <Polyline fx:id="winningsHelpArrow" fill="WHITE" layoutX="393.0" layoutY="190.0" points="-26.0, -25.0, -62.0, -40.0, -26.0, -54.0, -26.0, -54.0" stroke="WHITE" strokeType="INSIDE" visible="false" />
+      <Line fx:id="winningsHelpLine" endX="-43.0" layoutX="468.0" layoutY="150.0" startX="-100.0" stroke="WHITE" visible="false" />
+      <Label fx:id="winningsHelpText" layoutX="426.0" layoutY="114.0" prefHeight="72.0" prefWidth="143.0" text="This shows your&#10;current winnings" textFill="WHITE" visible="false">
+         <font>
+            <Font size="15.0" />
+         </font></Label>
+      <Polyline fx:id="repeatArrowHelp" fill="WHITE" layoutX="672.0" layoutY="606.0" points="-35.0, -25.0, -21.0, -52.0, -4.0, -25.0, -4.0, -25.0" stroke="WHITE" strokeType="INSIDE" visible="false" />
+      <Line fx:id="repeatLineHelp" endX="-42.5" endY="-40.0" layoutX="695.0" layoutY="621.0" startX="-42.5" startY="-10.0" stroke="WHITE" visible="false" />
+      <Label fx:id="repeatHelpText" layoutX="595.0" layoutY="603.0" prefHeight="72.0" prefWidth="117.0" text="This will repeat&#10; the question" textFill="WHITE" visible="false">
+         <font>
+            <Font size="15.0" />
+         </font></Label>
+      <Polyline fx:id="submitArrowHelp" fill="WHITE" layoutX="781.0" layoutY="606.0" points="-35.0, -25.0, -21.0, -52.0, -4.0, -25.0, -4.0, -25.0" stroke="WHITE" strokeType="INSIDE" visible="false" />
+      <Line fx:id="submitHelpLine" endX="-42.5" endY="-40.0" layoutX="804.0" layoutY="621.0" startX="-42.5" startY="-10.0" stroke="WHITE" visible="false" />
+      <Label fx:id="submitHelpText" layoutX="730.0" layoutY="603.0" prefHeight="72.0" prefWidth="117.0" text="Click to submit &#10;your answer " textFill="WHITE" visible="false">
+         <font>
+            <Font size="15.0" />
+         </font></Label>
+      <Label fx:id="timerLabel" alignment="CENTER_RIGHT" layoutX="595.0" layoutY="460.0" prefHeight="38.0" prefWidth="199.0" text="Time left: 10" textFill="WHITE">
+         <font>
+            <Font size="19.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>
